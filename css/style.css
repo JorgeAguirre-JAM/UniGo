@@ -1,6 +1,7 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
+    overflow: hidden;
 }
 .navbar {
     background-color: #333;
@@ -60,12 +61,14 @@ body {
 
 .primer-contenido{
     width: 100%;
-    height: 10vw;
-    background-color: aqua;
+    height: auto;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
 }
 
 .primer-contenido .titulos1{
-    background-color: blanchedalmond;
     justify-content: center;
     justify-items: center;
 }
@@ -77,4 +80,76 @@ body {
 .primer-contenido .titulos1 h2{
     font-size: 30px;
     margin-top: -30px;
+}
+
+.slider{
+    position: relative;
+    width: 100%;
+    height: 370px;
+}
+.item{
+    position: absolute;
+    width: 200px;
+    height: 320px;
+    text-align: justify;
+    background-color: #b3b3b3;
+    border-radius: 10px;
+    padding: 20px;
+    transition: 0.5s;
+    left: calc(50% - 110px);
+    top: 0;
+}
+
+.item img{
+    width: 100%;
+}
+
+.item img{
+    width: 100%;
+}
+
+#next, #prev{
+    position: absolute;
+    top: 40%;
+    color: #fff;
+    background-color: transparent;
+    border: none;
+    font-size: xxx-large;
+    font-family: monospace;
+    font-weight: bold;
+    left: 400px;
+}
+#next{
+    left: unset;
+    right: 400px;
+}
+
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    position: absolute;
+}
+
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: auto;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+.footer a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer a:hover {
+    text-decoration: underline;
 }
