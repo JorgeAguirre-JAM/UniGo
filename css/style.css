@@ -99,6 +99,10 @@ html, body {
     .primer-contenido .titulos1 h2{
         font-size: 20px !important;
     }
+
+    .primer-contenido .slider button{
+        display: none;
+    }
 }
 
 .primer-contenido {
@@ -113,33 +117,6 @@ html, body {
 }
 
 
-.primer-contenido .titulos1{
-    justify-content: center;
-    justify-items: center;
-}
-
-.primer-contenido .titulos1 h1{
-    font-size: 90px;
-}
-
-.primer-contenido .titulos1 h2{
-    font-size: 30px;
-    margin-top: -30px;
-    white-space: nowrap;
-}
-
-@media (max-width: 800px) {
-    .slider {
-        width: 100%; 
-    }
-    .slider .item img {
-        width: 100%; 
-    }
-
-    .slider button{
-        display: none;
-    }
-}
 
 .slider{
     display: flex;
@@ -153,7 +130,6 @@ html, body {
     margin-bottom: 50px;
     touch-action: pan-y;
 }
-
 
 .item{
     position: absolute;
@@ -170,11 +146,6 @@ html, body {
 .item img{
     width: 100%;
 }
-
-.item img{
-    width: 100%;
-}
-
 
 #next, #prev{
     position: absolute;
