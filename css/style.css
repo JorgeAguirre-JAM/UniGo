@@ -1,8 +1,7 @@
 html, body {
+    overflow-x: hidden;
     margin: 0;
-    height: 100%;
     font-family: Arial, sans-serif;
-    overflow: hidden;
 }
 .navbar {
     background-color: #333;
@@ -39,32 +38,74 @@ html, body {
     color: white;
     cursor: pointer;
 }
-@media (max-width: 768px) {
+@media (max-width: 800px) {
+    .navbar{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+
+    .logo{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
     .menu {
         display: none;
         flex-direction: column;
-        background-color: #333;
+        background-color: #333333;
         position: absolute;
         top: 60px;
         right: 0;
-        width: 200px;
+        width: auto;
         text-align: right;
         padding: 10px;
+        z-index: 1000;
     }
     .menu a {
         display: block;
         padding: 10px;
     }
     .menu-icon {
-        display: block;
+        display: flex;
+        position: absolute;
+        right: 15px;
+    }
+}
+
+@media (min-width: 800px) {
+    .logo a {
+        display: inline-block;
+    }
+}
+
+@media (max-width: 800px) {
+    .logo a {
+        display: none;
+    }
+}
+
+@media screen and (max-width:800px){
+    .primer-contenido .titulos1{
+        text-align: center;
+    }
+
+    .primer-contenido .titulos1 h1{
+        font-size: 50px !important;
+    }
+
+    .primer-contenido .titulos1 h2{
+        font-size: 20px !important;
     }
 }
 
 .primer-contenido {
-
+    overflow: hidden;
     position: relative;
-    width: 100%;
-    height: auto;
+    width: 100vw;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -87,16 +128,30 @@ html, body {
     white-space: nowrap;
 }
 
+@media (max-width: 800px) {
+    .slider {
+        width: 100%; 
+    }
+    .slider .item img {
+        width: 100%; 
+    }
+
+    .slider button{
+        display: none;
+    }
+}
+
 .slider{
-     display: flex;
+    display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap; /* Para que no se superpongan los elementos */
+    flex-wrap: wrap;
     overflow: hidden;
     position: relative;
     width: 100%;
     height: 370px;
-    margin-bottom: 50px; /* Agrega espacio entre el slider y el footer */
+    margin-bottom: 50px;
+    touch-action: pan-y;
 }
 
 
@@ -124,7 +179,7 @@ html, body {
 #next, #prev{
     position: absolute;
     top: 40%;
-    color: #fff;
+    color: #000000;
     background-color: transparent;
     border: none;
     font-size: xxx-large;
@@ -132,39 +187,101 @@ html, body {
     font-weight: bold;
     left: 400px;
 }
+
 #next{
     left: unset;
     right: 400px;
 }
 
-.footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 20px;
+.pie-pagina{
+    overflow: hidden;
     width: 100%;
-    position: fixed;
-    bottom: 0;
-    left: 0;
+    background-color: #610088;
 }
-
-.footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    margin-top: auto;
-    width: 100%;
-    position: absolute;
-    bottom: 0;
+.pie-pagina .grupo-1{
+    width: auto;
+    max-width: 1200px;
+    margin: auto;
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap:50px;
+    padding: 45px 0px;
 }
-
-.footer a {
+.pie-pagina .grupo-1 .box figure{
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pie-pagina .grupo-1 .box figure img{
+    width: 50%;
+}
+.pie-pagina .grupo-1 .box h2{
     color: #fff;
-    text-decoration: none;
-    margin: 0 10px;
+    margin-bottom: 25px;
+    font-size: 20px;
 }
+.pie-pagina .grupo-1 .box p{
+    color: #efefef;
+    margin-bottom: 10px;
+}
+.pie-pagina .grupo-1 .red-social a{
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    color: #fff;
+    margin-right: 10px;
+    background-color: #610088;
+    text-align: center;
+    transition: all 300ms ease;
+}
+.pie-pagina .grupo-1 .red-social a:hover{
+    transition: background 0.3s, border-radius 0.3s;
+    color: #a318da;
+    background-color: #310044;
+    border-radius: 20px;
+}
+.pie-pagina .grupo-2{
+    background-color: #310044;
+    padding: 15px 10px;
+    text-align: center;
+    color: #fff;
+}
+.pie-pagina .grupo-2 small{
+    font-size: 15px;
+}
+@media screen and (max-width:800px){
+    .pie-pagina .grupo-1{
+        width: 90%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap:30px;
+        padding: 35px 0px;
+    }
 
-.footer a:hover {
-    text-decoration: underline;
+    .pie-pagina .grupo-1 .box figure{
+        width: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .pie-pagina .grupo-1 .box figure img{
+        width: 90px;
+    }
+
+    .pie-pagina .grupo-1 .box h2{
+        color: #fff;
+        margin-bottom: 25px;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .pie-pagina .grupo-1 .red-social {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center; 
+        gap: 10px;
+    }
 }

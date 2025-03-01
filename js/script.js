@@ -39,3 +39,29 @@ let items = document.querySelectorAll('.slider .item');
         active = active - 1 >= 0 ? active - 1 : active;
         loadShow();
     }
+
+
+    let startX = 0;
+    let endX = 0;
+    
+    const slider = document.querySelector('.slider');
+    
+    slider.addEventListener('touchstart', (event) => {
+        startX = event.touches[0].clientX;
+    });
+    
+    slider.addEventListener('touchmove', (event) => {
+        endX = event.touches[0].clientX;
+    });
+    
+    slider.addEventListener('touchend', () => {
+        if (startX > endX + 50) {
+            // Swipe left
+            active = active + 1 < items.length ? active + 1 : active;
+            loadShow();
+        } else if (startX + 50 < endX) {
+            // Swipe right
+            active = active - 1 >= 0 ? active - 1 : active;
+            loadShow();
+        }
+    });
