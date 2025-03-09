@@ -172,11 +172,22 @@ html, body {
     right: 400px;
 }
 
-.pie-pagina{
-    overflow: hidden;
-    width: 100%;
-    background-color: #610088;
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Asegura que el body ocupe al menos el 100% de la altura de la ventana */
 }
+
+.primer-contenido {
+    width: 100%;
+    height: 100vh;
+}
+
+.pie-pagina {
+    background-color: #610088;
+    margin-top: auto; /* Empuja el footer hacia abajo */
+}
+
 .pie-pagina .grupo-1{
     width: auto;
     max-width: 1200px;
@@ -266,61 +277,31 @@ html, body {
 }
 
 .segundo-contenido {
-    jus
+    background-color: #555;
     width: 100%;
     height: 100vh;
+    position: relative;
+}
+
+.segundo-contenido h1{
+    text-align: center;
+    font-size: 50px;
+}
+
+.segundo-contenido .cuadros {
+    top: 100px;
+    width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr; /* Dos columnas */
+    gap: 20px;
 }
 
-
-.titulos2{
-    grid-column: 1; /* Asegura que la descripción ocupe la segunda columna */
-    padding: 20px; /* Espaciado interno */
-    border-radius: 5px; /* Bordes redondeados */
-    margin: 40px;
-    justify-items: center;
+.cuadros-de-texto{
+    background-color: #fff;
+    grid-template-columns: 1fr;
 }
 
-.titulos2 #tea
-{ /*TEAYUDAREMOS IZQUIERDA*/
-    font-size: 80px;
-    text-align: center;
-}
-
-#aca{
-    font-size: 80px;
-    margin-top: -60px;
-    text-align: center;
-    color: #310044;
-}
-
-#ade{
-    font-size: 80px;
-    margin-top: -40px;
-    text-align: center;
-    color: #310044;
-}
-
-#tuf{
-    font-size: 80px;
-    margin-top: -50px;
-    text-align: center;
-    color: #310044;
-}
-
-.imagen-referencia {
-    grid-column: 2; /* Ubica el contenedor en la segunda columna */
-    padding: 20px; /* Espaciado interno */
-    border-radius: 5px; /* Bordes redondeados */
-    margin: 5px 40px; /* Mantiene el margen */
-}
-
-.imagen-referencia img{
-    width: 100%;
-}
-
-.x{
-    display: grid;
-    justify-content: center;
+.cuadros-de-texto2{
+    background-color: #fff;
+    grid-template-columns: 2fr;
 }
