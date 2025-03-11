@@ -64,3 +64,50 @@ slider.addEventListener('touchend', () => {
         loadShow();
     }
 });
+
+
+window.addEventListener("scroll", function() {
+    let navbar = document.querySelector(".navbar");
+    if (window.scrollY > 50) { 
+        navbar.style.backgroundColor = "#000"; /* Cambia a negro (o el color que quieras) */
+    } else {
+        navbar.style.backgroundColor = "transparent"; /* Regresa a transparente */
+    }
+
+    let enlace = this.document.querySelector("#enlace");
+    if (window.scrollY > 50) {
+        enlace.style.color = "#fff"; /* Cambia a blanco */
+    } else{
+        enlace.style.color = "#000"; /* Regresa a negro */
+    }
+
+    let enlace2 = this.document.querySelector("#enlace2");
+    if (window.scrollY > 50) {
+        enlace2.style.color = "#fff"; /* Cambia a blanco */
+    } else{
+        enlace2.style.color = "#000"; /* Regresa a negro */
+    }
+
+
+    let enlace3 = this.document.querySelector("#enlace3");
+    if (window.scrollY > 50) {
+        enlace3.style.color = "#fff"; /* Cambia a blanco */
+    } else{
+        enlace3.style.color = "#000"; /* Regresa a negro */
+    }
+
+
+    let enlace4 = this.document.querySelector("#enlace4");
+    if (window.scrollY > 50) {
+        enlace4.style.color = "#fff"; /* Cambia a blanco */
+    } else{
+        enlace4.style.color = "#000"; /* Regresa a negro */
+    }
+
+    let unigo = this.document.querySelector("#unigo");
+    if (window.scrollY > 50) {
+        unigo.style.color = "#fff"; /* Cambia a blanco */
+    } else{
+        unigo.style.color = "#000"; /* Regresa a negro */
+    }
+});
