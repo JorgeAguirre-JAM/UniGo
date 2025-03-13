@@ -36,28 +36,28 @@ html, body {
 }
 
 #enlace {
-    color: rgb(0, 0, 0);
+    color: white;
     text-decoration: none;
     padding: 10px 15px;
     transition: background 0.3s, border-radius 0.3s;
 }
 
 #enlace2 {
-    color: rgb(0, 0, 0);
+    color: white;
     text-decoration: none;
     padding: 10px 15px;
     transition: background 0.3s, border-radius 0.3s;
 }
 
 #enlace3 {
-    color: rgb(0, 0, 0);
+    color: white;
     text-decoration: none;
     padding: 10px 15px;
     transition: background 0.3s, border-radius 0.3s;
 }
 
 #enlace4 {
-    color: rgb(0, 0, 0);
+    color: white;
     text-decoration: none;
     padding: 10px 15px;
     transition: background 0.3s, border-radius 0.3s;
@@ -65,7 +65,7 @@ html, body {
 
 .menu a {
     font-weight: bold;
-    color: rgb(0, 0, 0);
+    color: white;
     text-decoration: none;
     padding: 10px 15px;
     transition: background 0.1s, border-radius 0.2s;
@@ -161,10 +161,12 @@ html, body {
 }
 
 .primer-contenido h1{
+    color: white;
     font-size: 70px;
 }
 
 .primer-contenido h2{
+    color: white;
     text-align: center;
     margin-top: -30px;
 }

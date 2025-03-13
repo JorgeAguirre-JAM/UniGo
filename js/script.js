@@ -78,14 +78,14 @@ window.addEventListener("scroll", function() {
     if (window.scrollY > 50) {
         enlace.style.color = "#fff"; /* Cambia a blanco */
     } else{
-        enlace.style.color = "#000"; /* Regresa a negro */
+        enlace.style.color = "#fff"; /* Regresa a negro */
     }
 
     let enlace2 = this.document.querySelector("#enlace2");
     if (window.scrollY > 50) {
         enlace2.style.color = "#fff"; /* Cambia a blanco */
     } else{
-        enlace2.style.color = "#000"; /* Regresa a negro */
+        enlace2.style.color = "#fff"; /* Regresa a negro */
     }
 
 
@@ -93,7 +93,7 @@ window.addEventListener("scroll", function() {
     if (window.scrollY > 50) {
         enlace3.style.color = "#fff"; /* Cambia a blanco */
     } else{
-        enlace3.style.color = "#000"; /* Regresa a negro */
+        enlace3.style.color = "#fff"; /* Regresa a negro */
     }
 
 
@@ -101,13 +101,13 @@ window.addEventListener("scroll", function() {
     if (window.scrollY > 50) {
         enlace4.style.color = "#fff"; /* Cambia a blanco */
     } else{
-        enlace4.style.color = "#000"; /* Regresa a negro */
+        enlace4.style.color = "#fff"; /* Regresa a negro */
     }
 
     let unigo = this.document.querySelector("#unigo");
     if (window.scrollY > 50) {
         unigo.style.color = "#fff"; /* Cambia a blanco */
     } else{
-        unigo.style.color = "#000"; /* Regresa a negro */
+        unigo.style.color = "#fff"; /* Regresa a negro */
     }
 });
